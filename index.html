@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DNA para IA — Ensine sua IA a pensar como um especialista na sua área</title>
+  <meta name="description" content="O DNA para IA é um PDF que, anexado a qualquer IA (ChatGPT, Claude, Gemini), faz ela raciocinar como um especialista na sua profissão. A partir de R$ 9,80.">
+  <meta name="theme-color" content="#06070d">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="DNA para IA — pense como um especialista na sua área">
+  <meta property="og:description" content="Transforme ChatGPT, Claude ou Gemini em um consultor especialista da sua profissão. A partir de R$ 9,80.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- =====================================================================
+       HEADER (fixed)
+       ===================================================================== -->
+  <header id="header">
+    <div class="container header-inner">
+      <a href="#hero" class="logo" aria-label="DNA para IA — início">
+        <!-- Stylized DNA double-helix -->
+        <svg class="helix" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M7 2c0 5 10 5 10 10s-10 5-10 10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+          <path d="M17 2c0 5-10 5-10 10s10 5 10 10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+          <line class="rung" x1="8.4" y1="5" x2="15.6" y2="5" stroke-width="1.5" stroke-linecap="round"/>
+          <line class="rung" x1="9.4" y1="8" x2="14.6" y2="8" stroke-width="1.5" stroke-linecap="round"/>
+          <line class="rung" x1="9.4" y1="16" x2="14.6" y2="16" stroke-width="1.5" stroke-linecap="round"/>
+          <line class="rung" x1="8.4" y1="19" x2="15.6" y2="19" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span>DNA<span class="grad-text">.IA</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#oferta">Oferta</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <a href="#oferta" class="btn btn-grad btn-sm header-cta">Quero meu DNA</a>
+        <button id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- =====================================================================
+         HERO
+         ===================================================================== -->
+    <section id="hero" class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+
+        <!-- Copy -->
+        <div class="hero-copy">
+          <span class="hero-badge">
+            <span class="dot" aria-hidden="true"></span>
+            Novo · <b>PDF que vira o cérebro da sua IA</b>
+          </span>
+
+          <h1>Ensine sua IA a pensar como um <span class="grad-text">especialista</span> na sua área</h1>
+
+          <p class="hero-sub">
+            O <b>DNA para IA</b> é um PDF que você anexa em qualquer IA — e na hora ela deixa de dar respostas genéricas
+            e passa a raciocinar como um consultor experiente da <b>sua profissão</b>.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#oferta" class="btn btn-grad">
+              Quero meu DNA
+              <span class="btn-arrow" aria-hidden="true">→</span>
+            </a>
+            <a href="#produtos" class="btn btn-ghost">Ver minha área</a>
+          </div>
+
+          <p class="hero-trust">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5l-8-3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              <path d="m9 12 2 2 4-4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Funciona em <b>ChatGPT · Claude · Gemini</b> · qualquer IA
+          </p>
+        </div>
+
+        <!-- PDF mockup (pure CSS/SVG) -->
+        <div class="hero-visual" aria-hidden="true">
+          <article class="pdf-mock">
+            <span class="pdf-tag">PDF</span>
+            <span class="pdf-eyebrow">Prompt de especialista</span>
+
+            <svg class="pdf-helix" viewBox="0 0 24 24" fill="none">
+              <path d="M7 2c0 5 10 5 10 10s-10 5-10 10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              <path d="M17 2c0 5-10 5-10 10s10 5 10 10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              <line class="rung" x1="8.4" y1="5"  x2="15.6" y2="5"  stroke-width="1.3" stroke-linecap="round"/>
+              <line class="rung" x1="9.4" y1="8"  x2="14.6" y2="8"  stroke-width="1.3" stroke-linecap="round"/>
+              <line class="rung" x1="9.4" y1="16" x2="14.6" y2="16" stroke-width="1.3" stroke-linecap="round"/>
+              <line class="rung" x1="8.4" y1="19" x2="15.6" y2="19" stroke-width="1.3" stroke-linecap="round"/>
+            </svg>
+
+            <h2 class="pdf-title">
+              <span>DNA</span>
+              <span class="grad-text">para IA</span>
+            </h2>
+            <p class="pdf-sub">Anexe. Pergunte. Receba respostas de especialista.</p>
+
+            <div class="pdf-foot">
+              <span class="chip">.pdf</span>
+              <span>v1 · BR</span>
+            </div>
+          </article>
+
+          <span class="pdf-float pdf-float--ai">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1m0-12.8-2.1 2.1m-8.6 8.6-2.1 2.1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/>
+            </svg>
+            Qualquer IA
+          </span>
+
+          <span class="pdf-float pdf-float--xp">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="m12 3 2.5 5.2 5.7.8-4.1 4 1 5.6L12 21l-5.1 2.6 1-5.6-4.1-4 5.7-.8L12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+            Nível especialista
+          </span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         PLACEHOLDER SECTIONS (filled by later tasks)
+         ===================================================================== -->
+    <!-- =====================================================================
+         PROBLEMA
+         ===================================================================== -->
+    <section id="problema" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">O problema</span>
+          <h2>Você usa IA, mas ela ainda não entende a <span class="grad-text">sua profissão</span>.</h2>
+          <p class="section-sub">
+            A IA já está em todo lugar — mas, do jeito que vem de fábrica, ela fala de tudo um pouco
+            e não domina nada do seu dia a dia. O resultado é genérico, raso e fácil de descartar.
+          </p>
+        </div>
+
+        <div class="card-grid card-grid--4">
+          <article class="card pain-card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 11h16M4 16h10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                <path d="M4 6h16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="2 3"/>
+              </svg>
+            </span>
+            <h3>Respostas genéricas</h3>
+            <p>A IA responde o óbvio, igual pra todo mundo. Nada específico pra sua área.</p>
+          </article>
+
+          <article class="card pain-card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.7"/>
+                <path d="M12 7.5V12l3 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <h3>Tempo perdido com prompts</h3>
+            <p>Você reescreve o mesmo prompt 10 vezes tentando fazer a IA entender o que precisa.</p>
+          </article>
+
+          <article class="card pain-card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3 3 7.5 12 12l9-4.5L12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                <path d="m3 12 9 4.5L21 12M3 16.5 12 21l9-4.5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" opacity=".45"/>
+              </svg>
+            </span>
+            <h3>Falta de contexto</h3>
+            <p>A IA não conhece os termos, processos e prioridades da sua profissão.</p>
+          </article>
+
+          <article class="card pain-card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 16v-2.5c0-1.4 1-2 2-2.9.9-.8 1.5-1.7 1.5-2.9A3.5 3.5 0 0 0 8.6 6.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="19.5" r="1.1" fill="currentColor"/>
+              </svg>
+            </span>
+            <h3>Não sabe por onde começar</h3>
+            <p>Você sabe que a IA pode ajudar, mas trava na hora de tirar resultado real dela.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SOLUÇÃO
+         ===================================================================== -->
+    <section id="solucao" class="section section--alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">A solução</span>
+          <h2>Conheça o <span class="grad-text">DNA para IA</span></h2>
+          <p class="section-sub">
+            Assim como o DNA define quem você é, o <b>DNA para IA</b> define como a sua IA pensa e responde —
+            especializada pra <b>sua profissão</b>, do vocabulário às prioridades.
+          </p>
+        </div>
+
+        <div class="solucao-layout">
+
+          <!-- Highlighted callout -->
+          <aside class="callout" aria-label="O que o DNA para IA não é">
+            <span class="callout-tag">Importante</span>
+            <p class="callout-strike">Não é mais uma lista de prompts genéricos.</p>
+            <p class="callout-line">
+              É um <span class="grad-text">sistema completo</span> que ensina a IA a raciocinar
+              como um especialista da sua área — e a continuar assim em toda conversa.
+            </p>
+            <ul class="callout-bits">
+              <li><span aria-hidden="true">›</span> Identidade de especialista</li>
+              <li><span aria-hidden="true">›</span> Base teórica da sua área</li>
+              <li><span aria-hidden="true">›</span> Formulário de personalização</li>
+            </ul>
+          </aside>
+
+          <!-- Differentiators -->
+          <div class="diff-list">
+            <article class="card diff-card">
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect x="3.5" y="4" width="17" height="16" rx="2.5" stroke="currentColor" stroke-width="1.7"/>
+                  <path d="M8 9h8M8 13h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                  <path d="m15.5 15.5 4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <div>
+                <h3>Não é lista de prompts</h3>
+                <p>É um sistema completo: identidade, base teórica e formulário de personalização.</p>
+              </div>
+            </article>
+
+            <article class="card diff-card">
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 3v3m0 12v3M3 12h3m12 0h3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                  <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/>
+                </svg>
+              </span>
+              <div>
+                <h3>Funciona em qualquer IA</h3>
+                <p>ChatGPT, Claude, Gemini ou qualquer outra. Você não troca de ferramenta.</p>
+              </div>
+            </article>
+
+            <article class="card diff-card">
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M5 19V11m7 8V5m7 14v-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <div>
+                <h3>Se adapta ao seu nível</h3>
+                <p>Iniciante, intermediário ou avançado: a IA calibra as respostas pra você.</p>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         COMO FUNCIONA
+         ===================================================================== -->
+    <section id="como-funciona" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">Como funciona</span>
+          <h2>Do PDF ao especialista em <span class="grad-text">3 passos</span></h2>
+          <p class="section-sub">
+            Sem instalar nada, sem configuração complicada. Você baixa, anexa e começa a usar.
+          </p>
+        </div>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step-badge" aria-hidden="true">1</span>
+            <span class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3v11m0 0 4-4m-4 4-4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5 18.5h14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <h3>Baixe o PDF</h3>
+            <p>Compra e recebe na hora o seu DNA para IA.</p>
+          </li>
+
+          <li class="step">
+            <span class="step-badge" aria-hidden="true">2</span>
+            <span class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M9 8.5 5.6 12 9 15.5M15 8.5 18.4 12 15 15.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="m21 7-3.3-3.3a2 2 0 0 0-2.8 0l-9.6 9.6a2 2 0 0 0 0 2.8L8.6 19" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" opacity=".5"/>
+              </svg>
+            </span>
+            <h3>Anexe na sua IA</h3>
+            <p>Abra o ChatGPT, Claude ou Gemini e anexe o arquivo.</p>
+          </li>
+
+          <li class="step">
+            <span class="step-badge" aria-hidden="true">3</span>
+            <span class="step-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="m12 3 2.5 5.2 5.7.8-4.1 4 1 5.6L12 21l-5.1 2.6 1-5.6-4.1-4 5.7-.8L12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <h3>Responda e ganhe um especialista</h3>
+            <p>A IA faz algumas perguntas pra entender seu perfil e passa a responder como especialista da sua área.</p>
+          </li>
+        </ol>
+
+        <!-- Antes / depois -->
+        <div class="compare">
+          <p class="compare-q">
+            <span aria-hidden="true">↳</span>
+            Pergunta: <b>“Me dá uma ideia de post pra divulgar minha loja.”</b>
+          </p>
+
+          <div class="compare-grid">
+            <article class="chat chat--plain">
+              <header class="chat-head">
+                <span class="chat-dot" aria-hidden="true"></span>
+                IA comum
+              </header>
+              <div class="bubble bubble--ai">
+                Você pode fazer um post falando sobre seus produtos, usar boas fotos e
+                colocar hashtags relevantes. Não esqueça de interagir com os seguidores!
+              </div>
+            </article>
+
+            <article class="chat chat--dna">
+              <header class="chat-head">
+                <span class="chat-dot" aria-hidden="true"></span>
+                IA com <span class="grad-text">DNA</span>
+              </header>
+              <div class="bubble bubble--dna">
+                Pra essa semana, faça um carrossel com o ângulo “antes/depois” do seu produto mais vendido.
+                Gancho no 1º slide: a dor do cliente. CTA direto pro WhatsApp. Poste terça 19h —
+                seu público de varejo local engaja mais à noite. Quer que eu escreva as 4 legendas?
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="produtos" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">Para quem é</span>
+          <h2>Encontre o <span class="grad-text">DNA da sua profissão</span></h2>
+          <p class="section-sub">São 23 DNAs especializados, organizados por área. Filtre pelo seu nicho e ache o seu.</p>
+        </div>
+
+        <div id="filtros" class="chips" role="group" aria-label="Filtrar produtos por área"></div>
+        <div id="grid-produtos" class="grid-produtos"></div>
+      </div>
+    </section>
+
+    <section id="beneficios" class="section section--alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">O que muda</span>
+          <h2>Da IA que <span class="grad-text">enrola</span> pra IA que <span class="grad-text">resolve</span></h2>
+          <p class="section-sub">A diferença entre perder tempo com respostas vagas e ter um especialista trabalhando com você.</p>
+        </div>
+
+        <div class="ba-compare">
+          <article class="ba-col ba-col--before">
+            <header class="ba-head">
+              <span class="ba-badge ba-badge--off">IA comum</span>
+              <h3>Sem o DNA</h3>
+            </header>
+            <ul class="ba-list">
+              <li>Respostas genéricas que servem pra qualquer um</li>
+              <li>Você reescreve o prompt várias vezes</li>
+              <li>A IA ignora o contexto da sua profissão</li>
+              <li>Resultado raso, que você ainda precisa refazer</li>
+            </ul>
+          </article>
+
+          <span class="ba-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+
+          <article class="ba-col ba-col--after">
+            <header class="ba-head">
+              <span class="ba-badge ba-badge--on">IA com DNA</span>
+              <h3>Com o seu DNA</h3>
+            </header>
+            <ul class="ba-list ba-list--on">
+              <li>Respostas sob medida pra sua área e seu nível</li>
+              <li>Funciona de primeira, sem ficar tentando</li>
+              <li>Entende termos, processos e prioridades da profissão</li>
+              <li>Entrega pronta pra usar — economia de tempo real</li>
+            </ul>
+          </article>
+        </div>
+
+        <ul class="ganhos">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m12 3 2.5 5.2 5.7.8-4.1 4 1 5.6L12 16l-5.1 2.6 1-5.6-4.1-4 5.7-.8L12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            <div><b>Resultado real</b><span>Respostas que você usa, não que você corrige.</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div><b>Economia de tempo</b><span>Pare de reescrever prompts. Vá direto ao ponto.</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2a7 7 0 0 1 7 7c0 3-2 4.5-2.5 6.5h-9C7 13.5 5 12 5 9a7 7 0 0 1 7-7Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 19h6m-5 3h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <div><b>Especialista 24/7</b><span>Um consultor da sua área sempre à disposição.</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div><b>Valor desde o 1º uso</b><span>Anexou, respondeu o formulário, já está valendo.</span></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="oferta" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">Escolha seu plano</span>
+          <h2>Comece <span class="grad-text">hoje</span> a partir de R$ 9,80</h2>
+          <p class="section-sub">Compra única, sem assinatura. Acesso imediato pela Yampi.</p>
+        </div>
+
+        <div class="planos">
+          <!-- Individual -->
+          <article class="plano">
+            <span class="plano-tag">Individual</span>
+            <h3 class="plano-nome">1 DNA da sua área</h3>
+            <div class="plano-preco">
+              <span class="moeda">R$</span><span class="valor">9</span><span class="cent">,80</span>
+            </div>
+            <p class="plano-desc">Perfeito pra quem quer turbinar a IA em uma profissão específica.</p>
+            <ul class="plano-feats">
+              <li>1 DNA especializado à sua escolha</li>
+              <li>Funciona em qualquer IA</li>
+              <li>Acesso imediato</li>
+            </ul>
+            <a href="#produtos" class="btn btn-ghost plano-cta">Escolher meu DNA</a>
+          </article>
+
+          <!-- Combo por nicho -->
+          <article class="plano">
+            <span class="plano-tag">Combo por nicho</span>
+            <h3 class="plano-nome">Todos os DNAs de uma área</h3>
+            <div class="plano-preco">
+              <span class="apartir">a partir de</span>
+              <span class="moeda">R$</span><span class="valor">11</span><span class="cent">,07</span>
+            </div>
+            <p class="plano-desc">Domine a IA em toda a sua área — com até <b>-70%</b> de desconto.</p>
+            <ul id="lista-combos" class="combos-list"></ul>
+          </article>
+
+          <!-- Combo completo (destaque) -->
+          <article class="plano plano--destaque">
+            <span class="plano-flag">Melhor escolha</span>
+            <span class="plano-tag">Combo completo</span>
+            <h3 class="plano-nome">Os 23 DNAs · todas as áreas</h3>
+            <div class="plano-preco">
+              <span class="de-grande">R$ 89,00</span>
+              <div><span class="moeda">R$</span><span class="valor">26</span><span class="cent">,70</span></div>
+              <span class="badge-off">-70%</span>
+            </div>
+            <p class="plano-desc">A biblioteca completa. Toda profissão, todo nível, um preço só.</p>
+            <ul class="plano-feats">
+              <li>Os 23 DNAs especializados</li>
+              <li>Todas as 7 áreas profissionais</li>
+              <li>Atualizações incluídas</li>
+              <li>Melhor custo-benefício</li>
+            </ul>
+            <a href="#" class="btn btn-grad plano-cta" data-combo-completo>Quero tudo com -70%</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="garantia" class="section section--alt">
+      <div class="container">
+        <div class="garantia-card">
+          <div class="garantia-shield" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5l-8-3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="m8.5 12 2.4 2.4L16 9.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="garantia-txt">
+            <span class="label">Risco zero</span>
+            <h2>Garantia de <span class="grad-text">7 dias</span></h2>
+            <p>Compre, baixe e teste o seu DNA para IA. Se nesses 7 dias você sentir que não é pra você, basta pedir o reembolso pela Yampi e devolvemos <b>100% do valor</b> — sem perguntas, sem burocracia. O risco é todo nosso.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="prova-social" class="section">
+      <div class="container">
+        <ul class="trust-strip">
+          <li><b>Qualquer IA</b><span>ChatGPT · Claude · Gemini</span></li>
+          <li><b>23 áreas</b><span>profissões e níveis</span></li>
+          <li><b>Acesso imediato</b><span>baixe e use na hora</span></li>
+          <li><b>7 dias</b><span>de garantia total</span></li>
+        </ul>
+
+        <div class="section-head" style="margin-top:56px">
+          <span class="label">Em breve</span>
+          <h2>Quem usa, <span class="grad-text">recomenda</span></h2>
+          <p class="section-sub">Estamos começando — os primeiros depoimentos de quem deu um DNA pra IA aparecem aqui.</p>
+        </div>
+        <div class="depo-grid">
+          <article class="depo depo--placeholder">
+            <div class="depo-stars" aria-hidden="true">★★★★★</div>
+            <p>"Seu depoimento aqui — em breve."</p>
+            <footer><span class="depo-avatar" aria-hidden="true"></span><span><b>Seu nome</b><span>Sua profissão</span></span></footer>
+          </article>
+          <article class="depo depo--placeholder">
+            <div class="depo-stars" aria-hidden="true">★★★★★</div>
+            <p>"Seu depoimento aqui — em breve."</p>
+            <footer><span class="depo-avatar" aria-hidden="true"></span><span><b>Seu nome</b><span>Sua profissão</span></span></footer>
+          </article>
+          <article class="depo depo--placeholder">
+            <div class="depo-stars" aria-hidden="true">★★★★★</div>
+            <p>"Seu depoimento aqui — em breve."</p>
+            <footer><span class="depo-avatar" aria-hidden="true"></span><span><b>Seu nome</b><span>Sua profissão</span></span></footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section section--alt">
+      <div class="container container--narrow">
+        <div class="section-head">
+          <span class="label">Dúvidas</span>
+          <h2>Perguntas <span class="grad-text">frequentes</span></h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>Funciona em qualquer IA?</span>
+              <span class="faq-ico" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><p>Sim. O DNA para IA funciona em ChatGPT, Claude, Gemini e qualquer outra IA que aceite anexar ou colar um arquivo. Você não precisa trocar de ferramenta.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>Preciso saber criar prompts?</span>
+              <span class="faq-ico" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><p>Não. O trabalho de "engenharia de prompt" já está feito dentro do PDF. Você só anexa, responde algumas perguntas que a IA faz, e ela passa a responder como especialista da sua área.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>É assinatura? Tem mensalidade?</span>
+              <span class="faq-ico" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><p>Não. É compra única. Você paga uma vez e o DNA é seu pra sempre, com as atualizações incluídas.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>Como eu recebo o produto?</span>
+              <span class="faq-ico" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><p>Após a compra pela Yampi, você recebe o acesso imediato para baixar o PDF. Dá pra começar a usar em minutos.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>Serve pro meu nível?</span>
+              <span class="faq-ico" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><p>Sim. O DNA se adapta ao seu nível — iniciante, intermediário ou avançado. A IA calibra a profundidade das respostas de acordo com o seu perfil.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>E se eu não gostar?</span>
+              <span class="faq-ico" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><p>Você tem 7 dias de garantia. Se não for pra você, pede o reembolso pela Yampi e devolvemos 100% do valor.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta-final" class="section">
+      <div class="container">
+        <div class="cta-final-card">
+          <div class="cta-final-glow" aria-hidden="true"></div>
+          <span class="label">Última chamada</span>
+          <h2>Dê à sua IA o <span class="grad-text">DNA da sua profissão</span></h2>
+          <p>Pare de receber respostas genéricas. A partir de R$ 9,80, transforme qualquer IA no especialista que a sua área precisa.</p>
+          <div class="cta-final-actions">
+            <a href="#oferta" class="btn btn-grad">Quero meu DNA <span class="btn-arrow" aria-hidden="true">→</span></a>
+            <span class="cta-final-guar">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5l-8-3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m9 12 2 2 4-4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              7 dias de garantia
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================================================
+       FOOTER
+       ===================================================================== -->
+  <footer id="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#hero" class="logo" aria-label="DNA para IA — início">
+          <svg class="helix" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 2c0 5 10 5 10 10s-10 5-10 10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+            <path d="M17 2c0 5-10 5-10 10s10 5 10 10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+            <line class="rung" x1="8.4" y1="5" x2="15.6" y2="5" stroke-width="1.5" stroke-linecap="round"/>
+            <line class="rung" x1="9.4" y1="8" x2="14.6" y2="8" stroke-width="1.5" stroke-linecap="round"/>
+            <line class="rung" x1="9.4" y1="16" x2="14.6" y2="16" stroke-width="1.5" stroke-linecap="round"/>
+            <line class="rung" x1="8.4" y1="19" x2="15.6" y2="19" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span>DNA<span class="grad-text">.IA</span></span>
+        </a>
+        <p class="footer-tag">Ensine sua IA a pensar como um especialista na sua área.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Rodapé">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#oferta">Oferta</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="footer-contact">
+        <span>Contato</span>
+        <a href="mailto:jojopablorafa.jf@gmail.com">jojopablorafa.jf@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer-base container">
+      <span>© 2026 DNA para IA. Todos os direitos reservados.</span>
+      <span>Pagamento seguro via Yampi.</span>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
