@@ -1356,3 +1356,89 @@ main > section:not(#hero) {
   .garantia-card { flex-direction: column; text-align: center; padding: 30px 22px; }
   .footer-inner { grid-template-columns: 1fr; gap: 26px; }
 }
+
+/* -------------------------------------------------------------------------
+   25. Animações de reveal no scroll
+   ------------------------------------------------------------------------- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .7s var(--ease), transform .7s var(--ease);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+[data-reveal].in {
+  opacity: 1;
+  transform: none;
+}
+
+/* -------------------------------------------------------------------------
+   26. Header scrolled + menu mobile aberto
+   ------------------------------------------------------------------------- */
+#header { transition: background .3s var(--ease), border-color .3s var(--ease), box-shadow .3s var(--ease); }
+#header.scrolled {
+  background: rgba(6, 7, 13, .92);
+  box-shadow: 0 10px 30px -18px rgba(0, 0, 0, .9);
+  border-bottom-color: var(--border-strong);
+}
+#burger span,
+#burger span::before,
+#burger span::after { transition: transform .25s var(--ease), opacity .2s var(--ease); }
+#header.nav-open #burger span { background: transparent; }
+#header.nav-open #burger span::before { top: 0; transform: rotate(45deg); }
+#header.nav-open #burger span::after { top: 0; transform: rotate(-45deg); }
+
+@media (max-width: 859px) {
+  /* Painel do menu mobile */
+  #header.nav-open .nav {
+    position: absolute;
+    top: var(--header-h);
+    left: 0; right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    padding: 16px 22px 22px;
+    background: rgba(6, 7, 13, .98);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 24px 50px -24px rgba(0, 0, 0, .9);
+  }
+  #header.nav-open .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+  }
+  #header.nav-open .nav-links a { padding: 12px 6px; font-size: 1rem; }
+  #header.nav-open .nav-links a::after { display: none; }
+  #header.nav-open .header-cta {
+    display: inline-flex;
+    margin: 8px 0 0;
+    justify-content: center;
+  }
+  /* O burger fica fixo no canto enquanto o painel abre abaixo */
+  #header.nav-open #burger { position: relative; z-index: 2; }
+}
+
+/* -------------------------------------------------------------------------
+   27. Ajustes finos responsivos
+   ------------------------------------------------------------------------- */
+.hero-trust { flex-wrap: wrap; }
+@media (max-width: 480px) {
+  .hero-trust { font-size: .82rem; }
+  .cta-final-actions { flex-direction: column; gap: 14px; }
+  .footer-base { flex-direction: column; }
+}
+
+/* Foco visível consistente em elementos interativos */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent-soft);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Reduced motion: revela tudo imediatamente */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
+}

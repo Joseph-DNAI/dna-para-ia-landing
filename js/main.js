@@ -116,6 +116,63 @@
     });
   }
 
+  /* ---- Header: estado "scrolled" + menu mobile ---- */
+  function setupHeader() {
+    var header = document.getElementById("header");
+    if (!header) return;
+
+    var onScroll = function () {
+      header.classList.toggle("scrolled", window.scrollY > 40);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+
+    var burger = document.getElementById("burger");
+    if (burger) {
+      burger.addEventListener("click", function () {
+        var open = header.classList.toggle("nav-open");
+        burger.setAttribute("aria-expanded", open ? "true" : "false");
+        burger.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+      });
+      // Fecha o menu ao clicar em qualquer link da navegação
+      header.querySelectorAll(".nav-links a, .header-cta").forEach(function (a) {
+        a.addEventListener("click", function () {
+          header.classList.remove("nav-open");
+          burger.setAttribute("aria-expanded", "false");
+          burger.setAttribute("aria-label", "Abrir menu");
+        });
+      });
+    }
+  }
+
+  /* ---- Reveal no scroll ---- */
+  function setupReveal() {
+    var els = document.querySelectorAll("[data-reveal]");
+    if (!("IntersectionObserver" in window) || !els.length) {
+      els.forEach(function (el) { el.classList.add("in"); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          en.target.classList.add("in");
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    els.forEach(function (el) { io.observe(el); });
+  }
+
+  /* Marca elementos para reveal (mantém o HTML limpo) */
+  function tagReveal() {
+    var sel = ".section-head, .card, .step, .ba-col, .ganhos li, " +
+      ".plano, .garantia-card, .trust-strip li, .depo, .faq-item, .cta-final-card";
+    document.querySelectorAll(sel).forEach(function (el, i) {
+      el.setAttribute("data-reveal", "");
+      el.style.setProperty("--reveal-delay", (i % 6) * 45 + "ms");
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     renderChips();
     renderProdutos();
@@ -123,5 +180,8 @@
     renderCombos();
     applyComboCompletoLink();
     setupFaq();
+    setupHeader();
+    tagReveal();
+    setupReveal();
   });
 })();
