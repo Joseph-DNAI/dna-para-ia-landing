@@ -95,11 +95,33 @@
     });
   }
 
+  /* ---- FAQ: acordeão (um aberto por vez) ---- */
+  function setupFaq() {
+    var items = document.querySelectorAll(".faq-item");
+    items.forEach(function (item) {
+      var q = item.querySelector(".faq-q");
+      if (!q) return;
+      q.addEventListener("click", function () {
+        var isOpen = item.classList.contains("open");
+        items.forEach(function (i) {
+          i.classList.remove("open");
+          var btn = i.querySelector(".faq-q");
+          if (btn) btn.setAttribute("aria-expanded", "false");
+        });
+        if (!isOpen) {
+          item.classList.add("open");
+          q.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     renderChips();
     renderProdutos();
     setupFiltro();
     renderCombos();
     applyComboCompletoLink();
+    setupFaq();
   });
 })();
