@@ -383,12 +383,125 @@
       </div>
     </section>
 
-    <section id="beneficios">
-      <!-- TODO: seção Benefícios -->
+    <section id="beneficios" class="section section--alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">O que muda</span>
+          <h2>Da IA que <span class="grad-text">enrola</span> pra IA que <span class="grad-text">resolve</span></h2>
+          <p class="section-sub">A diferença entre perder tempo com respostas vagas e ter um especialista trabalhando com você.</p>
+        </div>
+
+        <div class="ba-compare">
+          <article class="ba-col ba-col--before">
+            <header class="ba-head">
+              <span class="ba-badge ba-badge--off">IA comum</span>
+              <h3>Sem o DNA</h3>
+            </header>
+            <ul class="ba-list">
+              <li>Respostas genéricas que servem pra qualquer um</li>
+              <li>Você reescreve o prompt várias vezes</li>
+              <li>A IA ignora o contexto da sua profissão</li>
+              <li>Resultado raso, que você ainda precisa refazer</li>
+            </ul>
+          </article>
+
+          <span class="ba-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+
+          <article class="ba-col ba-col--after">
+            <header class="ba-head">
+              <span class="ba-badge ba-badge--on">IA com DNA</span>
+              <h3>Com o seu DNA</h3>
+            </header>
+            <ul class="ba-list ba-list--on">
+              <li>Respostas sob medida pra sua área e seu nível</li>
+              <li>Funciona de primeira, sem ficar tentando</li>
+              <li>Entende termos, processos e prioridades da profissão</li>
+              <li>Entrega pronta pra usar — economia de tempo real</li>
+            </ul>
+          </article>
+        </div>
+
+        <ul class="ganhos">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m12 3 2.5 5.2 5.7.8-4.1 4 1 5.6L12 16l-5.1 2.6 1-5.6-4.1-4 5.7-.8L12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            <div><b>Resultado real</b><span>Respostas que você usa, não que você corrige.</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div><b>Economia de tempo</b><span>Pare de reescrever prompts. Vá direto ao ponto.</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2a7 7 0 0 1 7 7c0 3-2 4.5-2.5 6.5h-9C7 13.5 5 12 5 9a7 7 0 0 1 7-7Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 19h6m-5 3h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <div><b>Especialista 24/7</b><span>Um consultor da sua área sempre à disposição.</span></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div><b>Valor desde o 1º uso</b><span>Anexou, respondeu o formulário, já está valendo.</span></div>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <section id="oferta">
-      <!-- TODO: seção Oferta / pricing -->
+    <section id="oferta" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">Escolha seu plano</span>
+          <h2>Comece <span class="grad-text">hoje</span> a partir de R$ 9,80</h2>
+          <p class="section-sub">Compra única, sem assinatura. Acesso imediato pela Yampi.</p>
+        </div>
+
+        <div class="planos">
+          <!-- Individual -->
+          <article class="plano">
+            <span class="plano-tag">Individual</span>
+            <h3 class="plano-nome">1 DNA da sua área</h3>
+            <div class="plano-preco">
+              <span class="moeda">R$</span><span class="valor">9</span><span class="cent">,80</span>
+            </div>
+            <p class="plano-desc">Perfeito pra quem quer turbinar a IA em uma profissão específica.</p>
+            <ul class="plano-feats">
+              <li>1 DNA especializado à sua escolha</li>
+              <li>Funciona em qualquer IA</li>
+              <li>Acesso imediato</li>
+            </ul>
+            <a href="#produtos" class="btn btn-ghost plano-cta">Escolher meu DNA</a>
+          </article>
+
+          <!-- Combo por nicho -->
+          <article class="plano">
+            <span class="plano-tag">Combo por nicho</span>
+            <h3 class="plano-nome">Todos os DNAs de uma área</h3>
+            <div class="plano-preco">
+              <span class="apartir">a partir de</span>
+              <span class="moeda">R$</span><span class="valor">11</span><span class="cent">,07</span>
+            </div>
+            <p class="plano-desc">Domine a IA em toda a sua área — com até <b>-70%</b> de desconto.</p>
+            <ul id="lista-combos" class="combos-list"></ul>
+          </article>
+
+          <!-- Combo completo (destaque) -->
+          <article class="plano plano--destaque">
+            <span class="plano-flag">Melhor escolha</span>
+            <span class="plano-tag">Combo completo</span>
+            <h3 class="plano-nome">Os 23 DNAs · todas as áreas</h3>
+            <div class="plano-preco">
+              <span class="de-grande">R$ 89,00</span>
+              <div><span class="moeda">R$</span><span class="valor">26</span><span class="cent">,70</span></div>
+              <span class="badge-off">-70%</span>
+            </div>
+            <p class="plano-desc">A biblioteca completa. Toda profissão, todo nível, um preço só.</p>
+            <ul class="plano-feats">
+              <li>Os 23 DNAs especializados</li>
+              <li>Todas as 7 áreas profissionais</li>
+              <li>Atualizações incluídas</li>
+              <li>Melhor custo-benefício</li>
+            </ul>
+            <a href="#" class="btn btn-grad plano-cta" data-combo-completo>Quero tudo com -70%</a>
+          </article>
+        </div>
+      </div>
     </section>
 
     <section id="garantia">

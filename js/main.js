@@ -70,9 +70,36 @@
     });
   }
 
+  /* ---- Oferta: combos por nicho + link do combo completo ---- */
+  function renderCombos() {
+    var COMBOS = DATA.COMBOS || [];
+    var el = document.getElementById("lista-combos");
+    if (!el) return;
+    el.innerHTML = COMBOS.map(function (c) {
+      return '<li class="combo-row">' +
+        '<span class="combo-nome">' + c.nome.replace(/^Combo\s+/, "") + "</span>" +
+        '<span class="combo-preco">' +
+        '<span class="de">' + fmt(c.precoDe) + "</span>" +
+        "<strong>" + fmt(c.preco) + "</strong>" +
+        "</span>" +
+        '<a class="combo-link" href="' + c.link + '" aria-label="Comprar ' + c.nome + '">Comprar</a>' +
+        "</li>";
+    }).join("");
+  }
+
+  function applyComboCompletoLink() {
+    var cfg = DATA.COMBO_COMPLETO || {};
+    var link = cfg.link || (DATA.CONFIG && DATA.CONFIG.comboCompletoLink) || "#";
+    document.querySelectorAll("[data-combo-completo]").forEach(function (a) {
+      a.setAttribute("href", link);
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     renderChips();
     renderProdutos();
     setupFiltro();
+    renderCombos();
+    applyComboCompletoLink();
   });
 })();
