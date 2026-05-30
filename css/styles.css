@@ -570,3 +570,365 @@ main > section:not(#hero) {
   html { scroll-behavior: auto; }
   .pdf-mock { transform: rotate(-4deg); }
 }
+
+/* =========================================================================
+   Task 4 + 5 — Section system, Problema, Solução, Como funciona
+   ========================================================================= */
+
+/* -------------------------------------------------------------------------
+   11. Reusable section pattern (.section / .label / .section-head / card)
+   ------------------------------------------------------------------------- */
+.section { position: relative; }
+
+/* alternate band for visual rhythm */
+.section--alt { background: var(--bg-soft); }
+.section--alt::before,
+.section--alt::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  height: 1px;
+  background: var(--border);
+}
+.section--alt::before { top: 0; }
+.section--alt::after { bottom: 0; }
+
+/* Small uppercase gradient label */
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--font-head);
+  font-size: .74rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.label::before {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background: var(--grad);
+}
+
+/* Centered section header */
+.section-head {
+  max-width: 640px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+.section-head h2 {
+  font-size: clamp(1.7rem, 5vw, 2.6rem);
+  font-weight: 700;
+}
+.section-sub {
+  margin-top: 18px;
+  font-size: clamp(1rem, 2.4vw, 1.1rem);
+  color: var(--txt-dim);
+}
+.section-sub b { color: var(--txt); font-weight: 600; }
+
+/* Generic surface card */
+.card {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px 24px;
+  transition: transform .35s var(--ease), border-color .35s var(--ease),
+              box-shadow .35s var(--ease), background .35s var(--ease);
+}
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-strong);
+  box-shadow: 0 22px 50px -26px rgba(0, 0, 0, .85);
+}
+
+/* Card icon chip */
+.card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px; height: 46px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  color: var(--accent-soft);
+  background: rgba(139, 92, 255, .1);
+  border: 1px solid rgba(167, 139, 255, .22);
+  flex: none;
+  transition: color .35s var(--ease), background .35s var(--ease);
+}
+.card-icon svg { width: 24px; height: 24px; }
+.card:hover .card-icon { color: var(--accent-2); background: rgba(196, 75, 255, .14); }
+
+/* Responsive auto-fit grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+/* -------------------------------------------------------------------------
+   12. Problema
+   ------------------------------------------------------------------------- */
+.pain-card h3 {
+  font-size: 1.12rem;
+  margin-bottom: 8px;
+}
+.pain-card p {
+  font-size: .94rem;
+  color: var(--txt-dim);
+}
+/* gradient top-edge accent revealed on hover */
+.pain-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: var(--grad);
+  opacity: 0;
+  transition: opacity .35s var(--ease);
+}
+.pain-card:hover::before { opacity: 1; }
+
+/* -------------------------------------------------------------------------
+   13. Solução
+   ------------------------------------------------------------------------- */
+.solucao-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* Highlighted callout */
+.callout {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  padding: 30px 28px;
+  background:
+    radial-gradient(130% 100% at 0% 0%, rgba(196, 75, 255, .16), transparent 55%),
+    linear-gradient(165deg, #15112a, #0c0a18 75%);
+  border: 1px solid rgba(167, 139, 255, .3);
+  box-shadow: var(--shadow-glow);
+}
+.callout-tag {
+  display: inline-block;
+  font-family: var(--font-head);
+  font-size: .64rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  padding: 5px 11px;
+  border-radius: 999px;
+  color: var(--accent-soft);
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid var(--border-strong);
+  margin-bottom: 18px;
+}
+.callout-strike {
+  font-family: var(--font-head);
+  font-size: 1.02rem;
+  color: var(--txt-dim);
+  text-decoration: line-through;
+  text-decoration-color: rgba(196, 75, 255, .6);
+  margin-bottom: 10px;
+}
+.callout-line {
+  font-family: var(--font-head);
+  font-size: clamp(1.25rem, 3.4vw, 1.55rem);
+  font-weight: 600;
+  line-height: 1.22;
+  letter-spacing: -.01em;
+}
+.callout-bits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+.callout-bits li {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: .85rem;
+  color: var(--txt);
+  padding: 8px 13px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .04);
+  border: 1px solid var(--border);
+}
+.callout-bits li span { color: var(--accent-2); font-weight: 700; }
+
+/* Differentiator stack */
+.diff-list {
+  display: grid;
+  gap: 14px;
+}
+.diff-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 22px 22px;
+}
+.diff-card .card-icon { margin-bottom: 0; }
+.diff-card h3 { font-size: 1.08rem; margin-bottom: 5px; }
+.diff-card p { font-size: .92rem; color: var(--txt-dim); }
+
+/* -------------------------------------------------------------------------
+   14. Como funciona — steps
+   ------------------------------------------------------------------------- */
+.steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  margin-bottom: 56px;
+}
+.step {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 30px 26px;
+  transition: transform .35s var(--ease), border-color .35s var(--ease);
+}
+.step:hover { transform: translateY(-5px); border-color: var(--border-strong); }
+
+/* Gradient circle number badge */
+.step-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #fff;
+  background: var(--grad);
+  box-shadow: 0 10px 26px -10px rgba(139, 92, 255, .7),
+              inset 0 1px 0 rgba(255, 255, 255, .3);
+  margin-bottom: 18px;
+}
+.step-icon {
+  display: block;
+  width: 26px; height: 26px;
+  color: var(--accent-soft);
+  margin-bottom: 14px;
+}
+.step-icon svg { width: 26px; height: 26px; }
+.step h3 { font-size: 1.12rem; margin-bottom: 8px; }
+.step p { font-size: .94rem; color: var(--txt-dim); }
+
+/* -------------------------------------------------------------------------
+   15. Como funciona — antes/depois
+   ------------------------------------------------------------------------- */
+.compare {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px 22px;
+  background: var(--bg-soft);
+}
+.compare-q {
+  text-align: center;
+  font-size: .96rem;
+  color: var(--txt-dim);
+  margin-bottom: 22px;
+}
+.compare-q span { color: var(--accent-soft); margin-right: 6px; }
+.compare-q b { color: var(--txt); font-weight: 600; }
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.chat {
+  border-radius: var(--radius-sm);
+  padding: 18px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+.chat--dna {
+  border-color: rgba(167, 139, 255, .35);
+  background:
+    radial-gradient(120% 90% at 100% 0%, rgba(196, 75, 255, .12), transparent 60%),
+    var(--surface);
+  box-shadow: 0 18px 44px -24px rgba(139, 92, 255, .55);
+}
+.chat-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-head);
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  color: var(--txt-dim);
+  margin-bottom: 14px;
+}
+.chat--dna .chat-head { color: var(--txt); }
+.chat-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--txt-dim);
+  flex: none;
+}
+.chat--dna .chat-dot {
+  background: var(--accent-2);
+  box-shadow: 0 0 0 4px rgba(196, 75, 255, .18);
+}
+.bubble {
+  font-size: .92rem;
+  line-height: 1.55;
+  padding: 14px 16px;
+  border-radius: 12px;
+}
+.bubble--ai {
+  color: var(--txt-dim);
+  background: rgba(255, 255, 255, .03);
+  border: 1px solid var(--border);
+}
+.bubble--dna {
+  color: var(--txt);
+  background: rgba(139, 92, 255, .1);
+  border: 1px solid rgba(167, 139, 255, .25);
+}
+
+/* -------------------------------------------------------------------------
+   16. Task 4 + 5 — Responsive
+   ------------------------------------------------------------------------- */
+@media (min-width: 720px) {
+  .compare-grid { grid-template-columns: 1fr 1fr; }
+  .compare { padding: 30px 28px; }
+}
+
+@media (min-width: 900px) {
+  /* Solução: concept callout + differentiator list side by side */
+  .solucao-layout {
+    grid-template-columns: 1.05fr .95fr;
+    gap: 24px;
+    align-items: start;
+  }
+
+  /* Steps in a row with a connector line behind the badges */
+  .steps { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .steps::before {
+    content: "";
+    position: absolute;
+    top: 52px;
+    left: 16%; right: 16%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(167, 139, 255, .5), transparent);
+    z-index: 0;
+  }
+  .step { z-index: 1; }
+}
