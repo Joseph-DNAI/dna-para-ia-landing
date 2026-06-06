@@ -1,7 +1,6 @@
 const CONFIG = { checkoutBase: "#", guaranteeDays: 7, comboCompletoLink: "#" };
 
 const NICHOS = [
-  { id: "empreendedorismo", label: "Empreendedorismo", short: "Empreender" },
   { id: "marketing",        label: "Marketing e Publicidade", short: "Marketing" },
   { id: "vendas",           label: "Vendas", short: "Vendas" },
   { id: "atendimento",      label: "Atendimento ao Cliente", short: "Atendimento" },
@@ -11,8 +10,6 @@ const NICHOS = [
 ];
 
 const PRODUTOS = [
-  { id:"empreendedor-digital", nome:"DNA Empreendedor Digital", nicho:"empreendedorismo", profissoes:["Empreendedor","Infoprodutor"], precoDe:12.30, preco:9.80, link:"#" },
-
   { id:"criacao-conteudo", nome:"DNA Criação de Conteúdo", nicho:"marketing", profissoes:["Social Media","Produtor de Conteúdo","Branding"], precoDe:14.00, preco:9.80, link:"#" },
   { id:"conversao-vendas", nome:"DNA Conversão e Vendas", nicho:"marketing", profissoes:["Copywriter","Email Marketing","Growth Hacker"], precoDe:14.00, preco:9.80, link:"#" },
   { id:"trafego-performance", nome:"DNA Tráfego e Performance", nicho:"marketing", profissoes:["Gestor de Tráfego","Analista de Marketing","Estrategista Digital"], precoDe:14.00, preco:9.80, link:"#" },
@@ -43,14 +40,14 @@ const PRODUTOS = [
 ];
 
 const COMBOS = [
-  { id:"c-marketing",   nome:"Combo Marketing Completo",   nicho:"marketing",   precoDe:56.00, preco:16.80, desconto:70, link:"#" },
-  { id:"c-vendas",      nome:"Combo Vendas Completo",      nicho:"vendas",      precoDe:48.90, preco:14.67, desconto:70, link:"#" },
-  { id:"c-educacao",    nome:"Combo Educação Completo",    nicho:"educacao",    precoDe:49.20, preco:14.76, desconto:70, link:"#" },
-  { id:"c-atendimento", nome:"Combo Atendimento Completo", nicho:"atendimento", precoDe:36.90, preco:11.07, desconto:70, link:"#" },
-  { id:"c-design",      nome:"Combo Design Completo",      nicho:"design",      precoDe:49.20, preco:14.76, desconto:70, link:"#" },
-  { id:"c-tech",        nome:"Combo Tech Completo",        nicho:"tech",        precoDe:49.20, preco:14.76, desconto:70, link:"#" },
+  { id:"c-marketing",   nome:"Combo Marketing Completo",   nicho:"marketing",   precoDe:56.00, preco:22.40, desconto:60, link:"#" },
+  { id:"c-vendas",      nome:"Combo Vendas Completo",      nicho:"vendas",      precoDe:48.90, preco:19.56, desconto:60, link:"#" },
+  { id:"c-educacao",    nome:"Combo Educação Completo",    nicho:"educacao",    precoDe:49.20, preco:19.68, desconto:60, link:"#" },
+  { id:"c-atendimento", nome:"Combo Atendimento Completo", nicho:"atendimento", precoDe:36.90, preco:14.76, desconto:60, link:"#" },
+  { id:"c-design",      nome:"Combo Design Completo",      nicho:"design",      precoDe:49.20, preco:19.68, desconto:60, link:"#" },
+  { id:"c-tech",        nome:"Combo Tech Completo",        nicho:"tech",        precoDe:49.20, preco:19.68, desconto:60, link:"#" },
 ];
 
-const COMBO_COMPLETO = { nome:"Combo Completo", subtitulo:"Todos os 23 DNAs", precoDe:89.00, preco:35.60, desconto:60, link:"#" };
+const COMBO_COMPLETO = { nome:"Combo Completo", subtitulo:"Todos os 22 DNAs", precoDe:289.40, preco:43.41, desconto:85, link:"#" };
 
 window.DNA_DATA = { CONFIG, NICHOS, PRODUTOS, COMBOS, COMBO_COMPLETO };
