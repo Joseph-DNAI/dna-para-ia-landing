@@ -516,13 +516,13 @@ ul { list-style: none; }
 }
 .pdf-float svg { width: 16px; height: 16px; color: var(--accent-2); }
 .pdf-float--ai {
-  bottom: 6%;
-  left: -2%;
+  bottom: -3%;
+  left: -8%;
   animation-delay: -2s;
 }
 .pdf-float--xp {
-  top: 4%;
-  right: -4%;
+  top: -3%;
+  right: -8%;
 }
 @keyframes floatPill {
   0%, 100% { transform: translateY(0); }
