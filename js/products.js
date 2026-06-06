@@ -51,6 +51,6 @@ const COMBOS = [
   { id:"c-tech",        nome:"Combo Tech Completo",        nicho:"tech",        precoDe:49.20, preco:14.76, desconto:70, link:"#" },
 ];
 
-const COMBO_COMPLETO = { nome:"Combo Completo", subtitulo:"Todos os 23 DNAs", precoDe:89.00, preco:26.70, desconto:70, link:"#" };
+const COMBO_COMPLETO = { nome:"Combo Completo", subtitulo:"Todos os 23 DNAs", precoDe:89.00, preco:35.60, desconto:60, link:"#" };
 
 window.DNA_DATA = { CONFIG, NICHOS, PRODUTOS, COMBOS, COMBO_COMPLETO };

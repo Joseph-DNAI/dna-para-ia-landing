@@ -2,3 +2,13 @@
 node_modules/
 .DS_Store
 .preview-*.png
+
+# Configuração pessoal do Claude Code (caminhos locais + skills privadas)
+.claude/
+
+# Documentação interna / specs (não publicar no repositório público)
+docs/
+
+# Arquivo de workspace do VS Code
+*.code-workspace
+Thumbs.db
