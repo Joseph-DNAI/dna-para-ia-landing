@@ -1051,6 +1051,44 @@ main > section:not(#hero) {
 .card-prod .btn { width: 100%; }
 
 .hidden { display: none !important; }
+.card-prod.clamped { display: none !important; }
+
+/* "Ver mais" dos produtos */
+.produtos-mais { display: flex; justify-content: center; margin-top: 28px; }
+#ver-mais[hidden] { display: none; }
+#ver-mais { min-width: 200px; }
+
+/* Seta flutuante: volta para os planos (aparece só no catálogo) */
+.fab-planos {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--grad);
+  color: #fff;
+  box-shadow: 0 16px 38px -12px rgba(139, 92, 255, .75);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity .3s var(--ease), transform .3s var(--ease), visibility .3s var(--ease);
+}
+.fab-planos svg { width: 24px; height: 24px; }
+.fab-planos:hover { transform: translateY(0) scale(1.07); }
+.fab-planos.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+@media (max-width: 520px) {
+  .fab-planos { right: 16px; bottom: 16px; width: 46px; height: 46px; }
+  .fab-planos svg { width: 22px; height: 22px; }
+}
 
 @keyframes cardIn {
   from { opacity: 0; transform: translateY(10px); }
@@ -1195,7 +1233,22 @@ main > section:not(#hero) {
   padding: 11px 0; border-bottom: 1px solid var(--border);
 }
 .combo-row:last-child { border-bottom: 0; }
+.combo-toggle {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: none; border: 0; padding: 0; margin: 0;
+  font: inherit; color: inherit; text-align: left; cursor: pointer; min-width: 0;
+}
+.combo-toggle[disabled] { cursor: default; }
 .combo-nome { font-size: .9rem; font-weight: 500; }
+.combo-chevron { width: 15px; height: 15px; color: var(--txt-dim); flex: none; transition: transform .25s var(--ease); }
+.combo-toggle[aria-expanded="true"] .combo-chevron { transform: rotate(180deg); }
+.combo-areas-wrap {
+  grid-column: 1 / -1;
+  display: grid; grid-template-rows: 0fr;
+  transition: grid-template-rows .28s var(--ease);
+}
+.combo-row.open .combo-areas-wrap { grid-template-rows: 1fr; }
+.combo-areas { overflow: hidden; font-size: .72rem; color: var(--txt-dim); line-height: 1.45; padding-top: 6px; }
 .combo-preco { display: flex; align-items: baseline; gap: 6px; }
 .combo-preco .de { font-size: .72rem; color: var(--txt-dim); text-decoration: line-through; }
 .combo-preco strong { font-family: var(--font-head); font-size: 1rem; font-weight: 700; }

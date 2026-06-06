@@ -8,6 +8,9 @@
   var NICHOS = DATA.NICHOS || [];
   var PRODUTOS = DATA.PRODUTOS || [];
 
+  var LINHAS_INICIAIS = 2;     // quantas linhas mostrar antes do "Ver mais"
+  var produtosExpanded = false;
+
   function fmt(v) {
     return "R$ " + v.toFixed(2).replace(".", ",");
   }
@@ -49,6 +52,73 @@
     grid.innerHTML = PRODUTOS.map(cardHTML).join("");
   }
 
+  /* Quantas colunas a grade tem agora (responsivo) */
+  function colCount(grid) {
+    var tpl = window.getComputedStyle(grid).getPropertyValue("grid-template-columns");
+    if (!tpl || tpl === "none") return 1;
+    return tpl.split(" ").filter(Boolean).length;
+  }
+
+  /* Mostra só LINHAS_INICIAIS linhas dos produtos visíveis; resto fica "clamped" */
+  function applyProdutosClamp() {
+    var grid = document.getElementById("grid-produtos");
+    var btn = document.getElementById("ver-mais");
+    if (!grid || !btn) return;
+
+    var limite = colCount(grid) * LINHAS_INICIAIS;
+    var visiveis = Array.prototype.filter.call(
+      grid.querySelectorAll(".card-prod"),
+      function (c) { return !c.classList.contains("hidden"); }
+    );
+
+    visiveis.forEach(function (card, i) {
+      card.classList.toggle("clamped", !produtosExpanded && i >= limite);
+    });
+
+    var ocultos = visiveis.length - limite;
+    if (ocultos <= 0) {
+      btn.hidden = true;                       // cabe tudo em 2 linhas
+    } else {
+      btn.hidden = false;
+      btn.textContent = produtosExpanded ? "Ver menos" : "Ver mais (+" + ocultos + ")";
+      btn.setAttribute("aria-expanded", produtosExpanded ? "true" : "false");
+    }
+  }
+
+  /* Seta flutuante: visível só quando o catálogo de produtos está na tela */
+  function setupVoltarPlanos() {
+    var fab = document.getElementById("voltar-planos");
+    var prod = document.getElementById("produtos");
+    if (!fab || !prod) return;
+    if (!("IntersectionObserver" in window)) { return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        fab.classList.toggle("show", en.isIntersecting);
+      });
+    }, { threshold: 0, rootMargin: "-30% 0px -30% 0px" });
+    io.observe(prod);
+  }
+
+  function setupVerMais() {
+    var btn = document.getElementById("ver-mais");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      produtosExpanded = !produtosExpanded;
+      applyProdutosClamp();
+      if (!produtosExpanded) {
+        var sec = document.getElementById("produtos");
+        if (sec) sec.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+    var t;
+    window.addEventListener("resize", function () {
+      clearTimeout(t);
+      t = setTimeout(function () {
+        if (!produtosExpanded) applyProdutosClamp();
+      }, 150);
+    }, { passive: true });
+  }
+
   function setupFiltro() {
     var filtros = document.getElementById("filtros");
     var grid = document.getElementById("grid-produtos");
@@ -67,6 +137,8 @@
         var show = nicho === "todos" || card.dataset.nicho === nicho;
         card.classList.toggle("hidden", !show);
       });
+      produtosExpanded = false;   // ao trocar de filtro, volta a 2 linhas
+      applyProdutosClamp();
     });
   }
 
@@ -76,15 +148,37 @@
     var el = document.getElementById("lista-combos");
     if (!el) return;
     el.innerHTML = COMBOS.map(function (c) {
+      var areas = PRODUTOS
+        .filter(function (p) { return p.nicho === c.nicho; })
+        .map(function (p) { return p.nome.replace(/^DNA\s+/, ""); })
+        .join(" · ");
       return '<li class="combo-row">' +
+        '<button class="combo-toggle" type="button" aria-expanded="false"' + (areas ? "" : " disabled") + '>' +
         '<span class="combo-nome">' + c.nome.replace(/^Combo\s+/, "") + "</span>" +
+        (areas ? '<svg class="combo-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' : "") +
+        "</button>" +
         '<span class="combo-preco">' +
         '<span class="de">' + fmt(c.precoDe) + "</span>" +
         "<strong>" + fmt(c.preco) + "</strong>" +
         "</span>" +
         '<a class="combo-link" href="' + c.link + '" aria-label="Comprar ' + c.nome + '">Comprar</a>' +
+        (areas ? '<div class="combo-areas-wrap"><span class="combo-areas">' + areas + "</span></div>" : "") +
         "</li>";
     }).join("");
+  }
+
+  /* Combos por nicho: expandir/recolher a lista de áreas */
+  function setupCombosToggle() {
+    var el = document.getElementById("lista-combos");
+    if (!el) return;
+    el.addEventListener("click", function (e) {
+      var btn = e.target.closest(".combo-toggle");
+      if (!btn || btn.disabled) return;
+      var row = btn.closest(".combo-row");
+      if (!row) return;
+      var open = row.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
   }
 
   function applyComboCompletoLink() {
@@ -177,7 +271,11 @@
     renderChips();
     renderProdutos();
     setupFiltro();
+    setupVerMais();
+    setupVoltarPlanos();
+    applyProdutosClamp();
     renderCombos();
+    setupCombosToggle();
     applyComboCompletoLink();
     setupFaq();
     setupHeader();

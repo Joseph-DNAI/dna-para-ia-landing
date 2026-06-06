@@ -77,7 +77,7 @@
 
           <p class="hero-sub">
             O <b>DNA para IA</b> é um PDF que você anexa em qualquer IA — e na hora ela deixa de dar respostas genéricas
-            e passa a raciocinar como um consultor experiente da <b>sua profissão</b>.
+            e passa a entender o seu contexto, as suas prioridades e como o <b>seu negócio</b> funciona.
           </p>
 
           <div class="hero-actions">
@@ -370,19 +370,6 @@
       </div>
     </section>
 
-    <section id="produtos" class="section">
-      <div class="container">
-        <div class="section-head">
-          <span class="label">Para quem é</span>
-          <h2>Encontre o <span class="grad-text">DNA da sua profissão</span></h2>
-          <p class="section-sub">São 23 DNAs especializados, organizados por área. Filtre pelo seu nicho e ache o seu.</p>
-        </div>
-
-        <div id="filtros" class="chips" role="group" aria-label="Filtrar produtos por área"></div>
-        <div id="grid-produtos" class="grid-produtos"></div>
-      </div>
-    </section>
-
     <section id="beneficios" class="section section--alt">
       <div class="container">
         <div class="section-head">
@@ -628,7 +615,31 @@
       </div>
     </section>
 
+    <!-- =====================================================================
+         PRODUTOS — catálogo (escolha do DNA individual)
+         ===================================================================== -->
+    <section id="produtos" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">Para quem é</span>
+          <h2>Encontre o <span class="grad-text">DNA da sua profissão</span></h2>
+          <p class="section-sub">São 23 DNAs especializados, organizados por área. Filtre pelo seu nicho e ache o seu.</p>
+        </div>
+
+        <div id="filtros" class="chips" role="group" aria-label="Filtrar produtos por área"></div>
+        <div id="grid-produtos" class="grid-produtos"></div>
+        <div class="produtos-mais">
+          <button id="ver-mais" class="btn btn-ghost" type="button" aria-controls="grid-produtos" aria-expanded="false" hidden>Ver mais</button>
+        </div>
+      </div>
+    </section>
+
   </main>
+
+  <!-- Seta flutuante: volta para a zona de planos -->
+  <a href="#oferta" id="voltar-planos" class="fab-planos" aria-label="Voltar para os planos">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5m0 0-6 6m6-6 6 6" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
 
   <!-- =====================================================================
        FOOTER
