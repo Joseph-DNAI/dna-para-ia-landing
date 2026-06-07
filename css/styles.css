@@ -210,6 +210,7 @@ ul { list-style: none; }
 }
 .logo .helix { width: 28px; height: 28px; color: var(--accent-soft); flex: none; }
 .logo .helix .rung { stroke: var(--accent-2); }
+.logo-img { height: 30px; width: auto; display: block; }
 
 /* Desktop nav */
 .nav {
@@ -464,6 +465,7 @@ ul { list-style: none; }
   color: var(--accent-soft);
 }
 .pdf-helix .rung { stroke: var(--accent-2); }
+.pdf-helix-img { height: 104px; width: auto; align-self: flex-start; margin: 14px 0 20px; }
 
 .pdf-title {
   font-family: var(--font-head);
