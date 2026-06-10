@@ -1,4 +1,4 @@
-const CONFIG = { checkoutBase: "#", guaranteeDays: 7, comboCompletoLink: "#" };
+const CONFIG = { checkoutBase: "https://vaultly.digital/c/", guaranteeDays: 7, comboCompletoLink: "#" };
 
 const NICHOS = [
   { id: "marketing",        label: "Marketing e Publicidade", short: "Marketing" },
@@ -10,42 +10,42 @@ const NICHOS = [
 ];
 
 const PRODUTOS = [
-  { id:"criacao-conteudo", nome:"DNA Criação de Conteúdo", nicho:"marketing", profissoes:["Social Media","Produtor de Conteúdo","Branding"], precoDe:14.00, preco:9.80, link:"#" },
-  { id:"conversao-vendas", nome:"DNA Conversão e Vendas", nicho:"marketing", profissoes:["Copywriter","Email Marketing","Growth Hacker"], precoDe:14.00, preco:9.80, link:"#" },
-  { id:"trafego-performance", nome:"DNA Tráfego e Performance", nicho:"marketing", profissoes:["Gestor de Tráfego","Analista de Marketing","Estrategista Digital"], precoDe:14.00, preco:9.80, link:"#" },
-  { id:"seo", nome:"DNA SEO", nicho:"marketing", profissoes:["Redator SEO"], precoDe:14.00, preco:9.80, link:"#" },
+  { id:"criacao-conteudo", nome:"DNA Criação de Conteúdo", nicho:"marketing", profissoes:["Social Media","Produtor de Conteúdo","Branding"], precoDe:14.00, preco:9.80, link:"https://vaultly.digital/c/iw63873h" },
+  { id:"conversao-vendas", nome:"DNA Conversão e Vendas", nicho:"marketing", profissoes:["Copywriter","Email Marketing","Growth Hacker"], precoDe:14.00, preco:9.80, link:"https://vaultly.digital/c/k4e77qng" },
+  { id:"trafego-performance", nome:"DNA Tráfego e Performance", nicho:"marketing", profissoes:["Gestor de Tráfego","Analista de Marketing","Estrategista Digital"], precoDe:14.00, preco:9.80, link:"https://vaultly.digital/c/pahwaptu" },
+  { id:"seo", nome:"DNA SEO", nicho:"marketing", profissoes:["Redator SEO"], precoDe:14.00, preco:9.80, link:"https://vaultly.digital/c/6anpye6r" },
 
-  { id:"prospeccao", nome:"DNA Prospecção e Qualificação", nicho:"vendas", profissoes:["SDR","Inside Sales","Representante Comercial"], precoDe:16.30, preco:9.80, link:"#" },
-  { id:"fechamento", nome:"DNA Fechamento e Negociação", nicho:"vendas", profissoes:["Closer","Executivo de Contas","Consultor Comercial"], precoDe:16.30, preco:9.80, link:"#" },
-  { id:"gestao-comercial", nome:"DNA Gestão Comercial", nicho:"vendas", profissoes:["Gerente de Vendas"], precoDe:16.30, preco:9.80, link:"#" },
+  { id:"prospeccao", nome:"DNA Prospecção e Qualificação", nicho:"vendas", profissoes:["SDR","Inside Sales","Representante Comercial"], precoDe:16.30, preco:9.80, link:"https://vaultly.digital/c/p9qqn9m4" },
+  { id:"fechamento", nome:"DNA Fechamento e Negociação", nicho:"vendas", profissoes:["Closer","Executivo de Contas","Consultor Comercial"], precoDe:16.30, preco:9.80, link:"https://vaultly.digital/c/356brfne" },
+  { id:"gestao-comercial", nome:"DNA Gestão Comercial", nicho:"vendas", profissoes:["Gerente de Vendas"], precoDe:16.30, preco:9.80, link:"https://vaultly.digital/c/j6ivpv5r" },
 
-  { id:"suporte", nome:"DNA Suporte e Resolução de Problemas", nicho:"atendimento", profissoes:["Suporte Técnico","SAC","Help Desk"], precoDe:12.30, preco:9.80, link:"#" },
-  { id:"conversacional", nome:"DNA Atendimento Conversacional", nicho:"atendimento", profissoes:["Atendimento WhatsApp","Pós-venda"], precoDe:12.30, preco:9.80, link:"#" },
-  { id:"customer-success", nome:"DNA Customer Success", nicho:"atendimento", profissoes:["Customer Success Manager"], precoDe:12.30, preco:9.80, link:"#" },
+  { id:"suporte", nome:"DNA Suporte e Resolução de Problemas", nicho:"atendimento", profissoes:["Suporte Técnico","SAC","Help Desk"], precoDe:12.30, preco:9.80, link:"https://vaultly.digital/c/tczff7fv" },
+  { id:"conversacional", nome:"DNA Atendimento Conversacional", nicho:"atendimento", profissoes:["Atendimento WhatsApp","Pós-venda"], precoDe:12.30, preco:9.80, link:"https://vaultly.digital/c/bw6zdwai" },
+  { id:"customer-success", nome:"DNA Customer Success", nicho:"atendimento", profissoes:["Customer Success Manager"], precoDe:12.30, preco:9.80, link:"https://vaultly.digital/c/f5xsy5vq" },
 
-  { id:"ensino", nome:"DNA Ensino e Tutoria", nicho:"educacao", profissoes:["Professor","Tutor","Instrutor"], precoDe:12.30, preco:9.80, link:"#" },
-  { id:"criacao-cursos", nome:"DNA Criação de Cursos", nicho:"educacao", profissoes:["Criador de Cursos Digitais"], precoDe:12.30, preco:9.80, link:"#" },
-  { id:"mentoria", nome:"DNA Mentoria e Desenvolvimento", nicho:"educacao", profissoes:["Mentor"], precoDe:12.30, preco:9.80, link:"#" },
-  { id:"gestao-pedagogica", nome:"DNA Gestão Pedagógica", nicho:"educacao", profissoes:["Coordenador Pedagógico"], precoDe:12.30, preco:9.80, link:"#" },
+  { id:"ensino", nome:"DNA Ensino e Tutoria", nicho:"educacao", profissoes:["Professor","Tutor","Instrutor"], precoDe:12.30, preco:9.80, link:"https://vaultly.digital/c/xf2e6rze" },
+  { id:"criacao-cursos", nome:"DNA Criação de Cursos", nicho:"educacao", profissoes:["Criador de Cursos Digitais"], precoDe:12.30, preco:9.80, link:"https://vaultly.digital/c/6cinnrit" },
+  { id:"mentoria", nome:"DNA Mentoria e Desenvolvimento", nicho:"educacao", profissoes:["Mentor"], precoDe:12.30, preco:9.80, link:"https://vaultly.digital/c/38485892" },
+  { id:"gestao-pedagogica", nome:"DNA Gestão Pedagógica", nicho:"educacao", profissoes:["Coordenador Pedagógico"], precoDe:12.30, preco:9.80, link:"https://vaultly.digital/c/wakx86we" },
 
-  { id:"design-visual", nome:"DNA Design Visual e Identidade", nicho:"design", profissoes:["Designer Gráfico","Diretor de Arte"], precoDe:12.30, preco:9.80, link:"#" },
-  { id:"ux-ui", nome:"DNA Experiência e Interface", nicho:"design", profissoes:["UX/UI Designer"], precoDe:12.30, preco:9.80, link:"#" },
-  { id:"ilustracao", nome:"DNA Ilustração e Arte Digital", nicho:"design", profissoes:["Ilustrador"], precoDe:12.30, preco:9.80, link:"#" },
-  { id:"video-motion", nome:"DNA Vídeo e Motion", nicho:"design", profissoes:["Editor de Vídeo","Motion Designer"], precoDe:12.30, preco:9.80, link:"#" },
+  { id:"design-visual", nome:"DNA Design Visual e Identidade", nicho:"design", profissoes:["Designer Gráfico","Diretor de Arte"], precoDe:12.30, preco:9.80, link:"https://vaultly.digital/c/av5n7mys" },
+  { id:"ux-ui", nome:"DNA Experiência e Interface", nicho:"design", profissoes:["UX/UI Designer"], precoDe:12.30, preco:9.80, link:"https://vaultly.digital/c/fc3et7hr" },
+  { id:"ilustracao", nome:"DNA Ilustração e Arte Digital", nicho:"design", profissoes:["Ilustrador"], precoDe:12.30, preco:9.80, link:"https://vaultly.digital/c/7qqpefdp" },
+  { id:"video-motion", nome:"DNA Vídeo e Motion", nicho:"design", profissoes:["Editor de Vídeo","Motion Designer"], precoDe:12.30, preco:9.80, link:"https://vaultly.digital/c/ct8kdpwc" },
 
-  { id:"frontend", nome:"DNA Desenvolvimento Front-end", nicho:"tech", profissoes:["Desenvolvedor Front-end"], precoDe:16.30, preco:9.80, link:"#" },
-  { id:"backend", nome:"DNA Back-end e Full Stack", nicho:"tech", profissoes:["Desenvolvedor Back-end","Full Stack"], precoDe:16.30, preco:9.80, link:"#" },
-  { id:"qa", nome:"DNA Qualidade e Testes", nicho:"tech", profissoes:["QA","Analista de Testes"], precoDe:16.30, preco:9.80, link:"#" },
-  { id:"infra", nome:"DNA Infraestrutura e Operações", nicho:"tech", profissoes:["DevOps","SysAdmin","SRE"], precoDe:16.30, preco:9.80, link:"#" },
+  { id:"frontend", nome:"DNA Desenvolvimento Front-end", nicho:"tech", profissoes:["Desenvolvedor Front-end"], precoDe:16.30, preco:9.80, link:"https://vaultly.digital/c/xipsmm7j" },
+  { id:"backend", nome:"DNA Back-end e Full Stack", nicho:"tech", profissoes:["Desenvolvedor Back-end","Full Stack"], precoDe:16.30, preco:9.80, link:"https://vaultly.digital/c/z4pcfn4w" },
+  { id:"qa", nome:"DNA Qualidade e Testes", nicho:"tech", profissoes:["QA","Analista de Testes"], precoDe:16.30, preco:9.80, link:"https://vaultly.digital/c/mprh2wiw" },
+  { id:"infra", nome:"DNA Infraestrutura e Operações", nicho:"tech", profissoes:["DevOps","SysAdmin","SRE"], precoDe:16.30, preco:9.80, link:"https://vaultly.digital/c/4pmji8ze" },
 ];
 
 const COMBOS = [
-  { id:"c-marketing",   nome:"Combo Marketing Completo",   nicho:"marketing",   precoDe:56.00, preco:22.40, desconto:60, link:"#" },
-  { id:"c-vendas",      nome:"Combo Vendas Completo",      nicho:"vendas",      precoDe:48.90, preco:19.56, desconto:60, link:"#" },
-  { id:"c-educacao",    nome:"Combo Educação Completo",    nicho:"educacao",    precoDe:49.20, preco:19.68, desconto:60, link:"#" },
-  { id:"c-atendimento", nome:"Combo Atendimento Completo", nicho:"atendimento", precoDe:36.90, preco:14.76, desconto:60, link:"#" },
-  { id:"c-design",      nome:"Combo Design Completo",      nicho:"design",      precoDe:49.20, preco:19.68, desconto:60, link:"#" },
-  { id:"c-tech",        nome:"Combo Tech Completo",        nicho:"tech",        precoDe:49.20, preco:19.68, desconto:60, link:"#" },
+  { id:"c-marketing",   nome:"Combo Marketing Completo",   nicho:"marketing",   precoDe:56.00, preco:22.40, desconto:60, link:"https://vaultly.digital/c/widn53gq" },
+  { id:"c-vendas",      nome:"Combo Vendas Completo",      nicho:"vendas",      precoDe:48.90, preco:19.56, desconto:60, link:"https://vaultly.digital/c/if68y7ua" },
+  { id:"c-educacao",    nome:"Combo Educação Completo",    nicho:"educacao",    precoDe:49.20, preco:19.68, desconto:60, link:"https://vaultly.digital/c/pfc9s5a4" },
+  { id:"c-atendimento", nome:"Combo Atendimento Completo", nicho:"atendimento", precoDe:36.90, preco:14.76, desconto:60, link:"https://vaultly.digital/c/8sss9vtu" },
+  { id:"c-design",      nome:"Combo Design Completo",      nicho:"design",      precoDe:49.20, preco:19.68, desconto:60, link:"https://vaultly.digital/c/3a99cez7" },
+  { id:"c-tech",        nome:"Combo Tech Completo",        nicho:"tech",        precoDe:49.20, preco:19.68, desconto:60, link:"https://vaultly.digital/c/2z9u89gj" },
 ];
 
 const COMBO_COMPLETO = { nome:"Combo Completo", subtitulo:"Todos os 22 DNAs", precoDe:289.40, preco:43.41, desconto:85, link:"#" };
