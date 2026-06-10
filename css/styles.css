@@ -1378,7 +1378,7 @@ main > section:not(#hero) {
   background: radial-gradient(circle, rgba(196, 75, 255, .25), transparent 70%);
   top: -180px; left: 50%; transform: translateX(-50%); filter: blur(30px); z-index: 0;
 }
-.cta-final-card > * { position: relative; z-index: 1; }
+.cta-final-card > *:not(.cta-final-glow) { position: relative; z-index: 1; }
 .cta-final-card h2 { font-size: clamp(1.7rem, 4vw, 2.6rem); margin: 10px 0 14px; }
 .cta-final-card p { color: var(--txt-dim); max-width: 540px; margin: 0 auto 28px; line-height: 1.6; }
 .cta-final-actions { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; }
