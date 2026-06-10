@@ -85,6 +85,36 @@
     }
   }
 
+  /* Popup promocional: aparece 1x por acesso e reaparece 30min após o último acesso */
+  function setupPromoModal() {
+    var modal = document.getElementById("promo-modal");
+    if (!modal) return;
+    var KEY = "dnaPromoLastAccess";
+    var THIRTY = 30 * 60 * 1000;
+    var now = Date.now();
+    var last = 0;
+    try { last = parseInt(localStorage.getItem(KEY) || "0", 10) || 0; } catch (e) {}
+
+    function onKey(e) { if (e.key === "Escape") close(); }
+    function close() {
+      modal.classList.remove("show");
+      document.removeEventListener("keydown", onKey);
+      setTimeout(function () { modal.setAttribute("hidden", ""); }, 340);
+    }
+    function open() {
+      modal.removeAttribute("hidden");
+      void modal.offsetWidth; // reflow para animar
+      modal.classList.add("show");
+      document.addEventListener("keydown", onKey);
+    }
+    modal.querySelectorAll("[data-promo-close]").forEach(function (el) {
+      el.addEventListener("click", close);
+    });
+
+    if (now - last > THIRTY) setTimeout(open, 900);
+    try { localStorage.setItem(KEY, String(now)); } catch (e) {}
+  }
+
   /* Seta flutuante: visível só quando o catálogo de produtos está na tela */
   function setupVoltarPlanos() {
     var fab = document.getElementById("voltar-planos");
@@ -273,6 +303,7 @@
     setupFiltro();
     setupVerMais();
     setupVoltarPlanos();
+    setupPromoModal();
     applyProdutosClamp();
     renderCombos();
     setupCombosToggle();

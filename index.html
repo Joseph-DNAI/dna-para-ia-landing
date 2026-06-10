@@ -31,7 +31,7 @@
 
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/favicon.png">
-  <link rel="stylesheet" href="css/styles.css?v=3">
+  <link rel="stylesheet" href="css/styles.css?v=4">
 </head>
 <body>
 
@@ -454,6 +454,38 @@
       </div>
     </section>
 
+    <!-- =====================================================================
+         DESAFIO 7 DIAS
+         ===================================================================== -->
+    <section id="desafio" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">Bônus de quem compra hoje</span>
+          <h2>Comprou hoje? Você entra no <span class="grad-text">Desafio 7 Dias</span></h2>
+          <p class="section-sub">Uma jornada guiada: a cada dia, uma missão rápida pra extrair o máximo do seu DNA. No 7º dia, você desbloqueia um prêmio exclusivo.</p>
+        </div>
+
+        <div class="desafio-card">
+          <div class="desafio-glow" aria-hidden="true"></div>
+          <ol class="desafio-dias">
+            <li><span class="dia">Dias 1–6</span><span class="dia-txt">Missões diárias e atalhos pra dominar seu DNA</span></li>
+            <li><span class="dia">Dia 7</span><span class="dia-txt">Você desbloqueia o bônus exclusivo</span></li>
+          </ol>
+
+          <span class="desafio-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+
+          <article class="premio">
+            <span class="premio-tag">🎁 Prêmio do 7º dia</span>
+            <h3 class="premio-nome">DNA Empreendedor de Sucesso</h3>
+            <p>Um DNA completo, de brinde, pra você pensar e agir como um empreendedor de verdade com a sua IA.</p>
+            <span class="premio-val">Grátis · exclusivo pra quem compra hoje</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="garantia" class="section section--alt">
       <div class="container">
         <div class="garantia-card">
@@ -481,6 +513,7 @@
           <li><b>7 dias</b><span>de garantia total</span></li>
         </ul>
 
+        <!-- DEPOIMENTOS DESATIVADOS TEMPORARIAMENTE — reativar quando houver reais
         <div class="section-head" style="margin-top:56px">
           <span class="label">Em breve</span>
           <h2>Quem usa, <span class="grad-text">recomenda</span></h2>
@@ -503,6 +536,7 @@
             <footer><span class="depo-avatar" aria-hidden="true"></span><span><b>Seu nome</b><span>Sua profissão</span></span></footer>
           </article>
         </div>
+        -->
       </div>
     </section>
 
@@ -604,6 +638,21 @@
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5m0 0-6 6m6-6 6 6" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </a>
 
+  <!-- Popup promocional (1x por acesso, reaparece após 30min) -->
+  <div id="promo-modal" class="promo-modal" hidden>
+    <div class="promo-backdrop" data-promo-close></div>
+    <div class="promo-box" role="dialog" aria-modal="true" aria-labelledby="promo-title">
+      <button class="promo-x" type="button" data-promo-close aria-label="Fechar">×</button>
+      <span class="promo-badge"><span class="dot" aria-hidden="true"></span> Por tempo limitado</span>
+      <h2 id="promo-title">Condições especiais em <span class="grad-text">todos os DNAs</span></h2>
+      <p class="promo-sub">Por tempo limitado, todos os produtos estão com preços especiais. E quem compra <b>hoje</b> entra no <b>Desafio 7 Dias</b> e ganha um bônus exclusivo no final.</p>
+      <div class="promo-actions">
+        <a href="#oferta" class="btn btn-grad" data-promo-close>Ver as ofertas <span class="btn-arrow" aria-hidden="true">→</span></a>
+        <button class="promo-link" type="button" data-promo-close>Agora não</button>
+      </div>
+    </div>
+  </div>
+
   <!-- =====================================================================
        FOOTER
        ===================================================================== -->
@@ -632,7 +681,7 @@
     </div>
   </footer>
 
-  <script src="js/products.js?v=3"></script>
-  <script src="js/main.js?v=3" defer></script>
+  <script src="js/products.js?v=4"></script>
+  <script src="js/main.js?v=4" defer></script>
 </body>
 </html>
